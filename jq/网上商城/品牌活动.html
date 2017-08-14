@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品牌活动</title>
+    <link rel="stylesheet" href="styles/reset.css" type="text/css" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="styles/skin/skin_0.css" type="text/css" id="cssfile" />
+</head>
+<body>
+<!-- 品牌活动 start -->
+<div id="jnBrand">
+    <div id="jnBrandTab">
+        <h2 title="品牌活动">品牌活动</h2>
+        <ul>
+            <li><a title="运动" href="#nogo">运动</a></li>
+            <li><a title="女鞋" href="#nogo">女鞋</a></li>
+            <li><a title="男鞋" href="#nogo">男鞋</a></li>
+            <li><a title="Applife" href="#nogo">童鞋</a></li>
+        </ul>
+    </div>
+    <div id="jnBrandContent">
+        <div id="jnBrandList">
+            <ul>
+                <li>
+                    <a href="###1" class="JS_live"><img alt="耐克" src="images/upload/20120217.jpg" /></a>
+                    <span><a href="###1">耐克</a></span>
+                </li>
+                <li>
+                    <a href="###2" class="JS_live"><img alt="阿迪达斯" src="images/upload/20120218.jpg" /></a>
+                    <span><a href="###2">阿迪达斯</a></span>
+                </li>
+                <li>
+                    <a href="###3" class="JS_live"><img alt="李宁" src="images/upload/20120219.png" /></a>
+                    <span><a href="###3">李宁</a></span>
+                </li>
+                <li>
+                    <a href="###4" class="JS_live"><img alt="安踏" src="images/upload/20120220.png" /></a>
+                    <span><a href="###4">安踏</a></span>
+                </li>
+                <li>
+                    <a href="###1" class="JS_live"><img alt="耐克" src="images/upload/20120217.jpg" /></a>
+                    <span><a href="###1">耐克</a></span>
+                </li>
+                <li>
+                    <a href="###2" class="JS_live"><img alt="阿迪达斯" src="images/upload/20120218.jpg" /></a>
+                    <span><a href="###2">阿迪达斯</a></span>
+                </li>
+                <li>
+                    <a href="###3" class="JS_live"><img alt="李宁" src="images/upload/20120219.png" /></a>
+                    <span><a href="###3">李宁</a></span>
+                </li>
+                <li>
+                    <a href="###4" class="JS_live"><img alt="安踏" src="images/upload/20120220.png" /></a>
+                    <span><a href="###4">安踏</a></span>
+                </li>
+                <li>
+                    <a href="###1" class="JS_live"><img alt="耐克" src="images/upload/20120217.jpg" /></a>
+                    <span><a href="###1">耐克</a></span>
+                </li>
+                <li>
+                    <a href="###2" class="JS_live"><img alt="阿迪达斯" src="images/upload/20120218.jpg" /></a>
+                    <span><a href="###2">阿迪达斯</a></span>
+                </li>
+                <li>
+                    <a href="###3" class="JS_live"><img alt="李宁" src="images/upload/20120219.png" /></a>
+                    <span><a href="###3">李宁</a></span>
+                </li>
+                <li>
+                    <a href="###4" class="JS_live"><img alt="安踏" src="images/upload/20120220.png" /></a>
+                    <span><a href="###4">安踏</a></span>
+                </li>
+                <li>
+                    <a href="###1" class="JS_live"><img alt="耐克" src="images/upload/20120217.jpg" /></a>
+                    <span><a href="###1">耐克</a></span>
+                </li>
+                <li>
+                    <a href="###2" class="JS_live"><img alt="阿迪达斯" src="images/upload/20120218.jpg" /></a>
+                    <span><a href="###2">阿迪达斯</a></span>
+                </li>
+                <li>
+                    <a href="###3" class="JS_live"><img alt="李宁" src="images/upload/20120219.png" /></a>
+                    <span><a href="###3">李宁</a></span>
+                </li>
+                <li>
+                    <a href="###4" class="JS_live"><img alt="安踏" src="images/upload/20120220.png" /></a>
+                    <span><a href="###4">安踏</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 品牌活动 end -->
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var $jtli = $("#jnBrandTab li")
+            $jtli.on("click",function () {
+            var nowIndex = $(this).index();
+            $jtli.eq(nowIndex).addClass("chos").siblings().removeClass("chos");
+            var phwidth = $("#jnBrandList li").outerWidth() * 4;
+            $("#jnBrandList").animate({left:-phwidth * nowIndex},1000)
+        })
+    })
+</script>
+</body>
+</html>

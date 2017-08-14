@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本框高度变化</title>
+</head>
+<body>
+<form action="" method="post">
+    <div id="msg">
+        <div class="msg_caption">
+            <!--  <span class="bigger">放大</span>
+             <span class="smaller">缩小</span>-->
+            <span class="down">向下</span><span class="up">向上</span>
+        </div>
+        <div>
+            <textarea name="" id="comment" cols="20" rows="8">多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化多行文本框高度变化.多行文本框高度变化.多行文本框高度变化.多行文本框高度变化</textarea>
+        </div>
+    </div>
+</form>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    /* $(function () {
+     $(".bigger").on("click",function () {
+     $("textarea").height(
+     $("textarea").height()+50
+     )
+     /!*console.log( this)*!/
+     })
+     $(".smaller").on("click",function () {
+     $("textarea").height(
+     $("textarea").height()-50
+     )
+     })
+     })
+     */
+/*    $(function () {
+
+        $(".bigger").on("click", function () {
+            console.log($("#comment").height());
+            if ($("#comment").height() < 500) {
+                $("#comment").animate({
+                        height: '+=50'
+
+
+                    }, 400
+                )
+            }
+
+
+        })
+        $(".smaller").on("click", function () {
+
+            if ($("#comment").height() > 0) {
+                $("#comment").animate({
+                    height: '-=50'
+
+                }, 400)
+            }
+
+
+        })
+    })*/
+   /*     $(function () {
+
+            $(".up").on("click",function () {
+                $("#comment").animate({
+                    scrollTop: '+=50'
+                },400);
+
+            });
+
+            $(".down").on("click",function () {
+                $("#comment").animate({
+                    scrollTop: '-=50'
+                },400);
+
+            })
+
+
+        })*/
+
+</script>
+</body>
+</html>

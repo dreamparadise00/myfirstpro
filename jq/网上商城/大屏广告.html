@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大屏广告</title>
+
+    <link rel="stylesheet" href="styles/reset.css" type="text/css" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <link rel="stylesheet" href="styles/skin/skin_0.css" type="text/css" id="cssfile" />
+    <style>
+        #JS_imgWrap .selected{
+            display: block;
+        }
+        #JS_imgWrap img{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!-- 大屏广告 start -->
+<div id="jnImageroll">
+    <a href="#nogo" id="JS_imgWrap">
+        <img src="images/ads/1.jpg" alt="相约情人节" class="selected"  >
+        <img src="images/ads/2.jpg" alt="新款上线"/>
+        <img src="images/ads/3.jpg" alt="愤怒小鸟特卖"/>
+        <img src="images/ads/4.jpg" alt="男鞋促销第一波"/>
+        <img src="images/ads/5.jpg" alt="春季新品发布"/>
+    </a>
+    <div>
+        <a href="###1"><em>相约情人节</em><em>全场119元起</em></a>
+        <a href="###2"><em>新款上线</em><em>全场357元起</em></a>
+        <a href="###3"><em>愤怒小鸟特卖</em><em>全场89元</em></a>
+        <a href="###4"><em>男鞋促销第一波</em><em>全场3.1折起</em></a>
+        <a href="###5" class="last"><em>春季新品发布</em><em>全场4.1折起</em></a>
+    </div>
+</div>
+<!-- 大屏广告 end -->
+<script src="../jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        var $jda =  $("#jnImageroll div a");
+        var $imgs = $("#JS_imgWrap img")
+        var nowIndex = 0;
+        $jda.on("mouseover",function () {
+            nowIndex = $(this).index();
+            $jda.eq(nowIndex).addClass('chos').siblings().removeClass('chos');
+            $imgs.eq(nowIndex).addClass('selected').siblings().removeClass('selected')
+        })
+
+       /* var $rollobj = $("#jnImageroll");
+        var $rolllist = $rollobj.find("div a");
+        var newhref = $rolllist.eq(index).attr("href");*/
+        //var newhref = $rolllist.eq(index).attr("href");
+     //   $("#JS_imgWrap").attr("href",newhref)
+        //    .find("img").eq(index).stop(true,true).fadeIn().siblings().fadeOut();
+    })
+</script>
+</body>
+</html>
