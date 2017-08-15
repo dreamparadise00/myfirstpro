@@ -173,12 +173,35 @@
 <script src="jquery-1.12.4.js"></script>
 <script src="jquery.cookie.js"></script>
 <script>
-    $("#skin li").on("click",function () {
+
+
+       /* if($.cookie('skin')){
+
+        $("#cssfile").attr("href","styles/skin/"+skin+".css");
+        $("#"+skin).addClass("selected").siblings().removeClass("selected")
+        }
+        $("#skin li").on("click",function () {
         var skin = $(this).attr("id");
         $.cookie("skin",skin,{expires:30});
         $("#cssfile").attr("href","styles/skin/"+skin+".css");
         $("#"+skin).addClass("selected").siblings().removeClass("selected")
-    })
+        })*/
+       $(function () {
+
+           if ($.cookie("skin")){
+               changeskin($.cookie("skin"))
+           }
+           $("#skin li").on("click",function () {
+               var skin =  $(this).attr("id")
+               $.cookie("skin",skin,{expires:30});
+                changeskin(skin)
+              /*  console.log($.cookie("skin"))*/
+           })
+           function changeskin(skin) {
+               $("#cssfile").attr("href","styles/skin/"+skin+".css");
+               $("#"+skin).addClass("selected").siblings().removeClass("selected")
+           }
+       })
 </script>
 </body>
 </html>
