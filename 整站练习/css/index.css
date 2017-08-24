@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+ list-style: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.wrapper{
+    width: 1002px;
+    margin: 0 auto;
+}
+#nav .wrapper{
+    background: #FFCCFF url("../img/logo.png") no-repeat left center;
+    height: 160px;
+}
