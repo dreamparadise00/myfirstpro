@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 220px;
+    width:960px ;
+    margin: 0 auto;
+}
+
+    /*header开始*/
+#header{
+    height: 100px;
+    position: relative;
+}
+#header .menu{
+    position: absolute;
+    left:20px;
+    top: 30px;;
+
+
+}
+#header .menu img{
+    display: block;
+}
+#header .logo{
+    width: 185px;
+    height: 100px;
+    text-align: center;
+
+    margin: 0 auto;
+}
+#header .logo img{
+    height: 75px;
+    width: 75px;
+    margin: 10px 0;
+}
+#header .login{
+    position: absolute;
+    right: 20px;
+    top:30px;
+}
+#header .login a{
+    color: #b89f7a;
+    font-size: 14px;
+    margin:4px;
+}
+    /*header结束*/
+    /*big-img开始*/
+#big-img{
+    width:100%;
+    position: relative;
+}
+#big-img img{
+    width: 100%;
+    display: block;
+
+}
+#big-img span{
+    background: #000;
+    color: #FFFFFF;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#big-img a{
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+    /*big-img结束*/
+/*my_starbucks开始*/
+#my_starbucks{
+    background:url("../img/rewards_bg.png");
+}
+
+#my_starbucks .rewards-marks{
+    width:350px;
+    height:220px;
+    color: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: inline-block;
+
+}
+#my_starbucks .rewards-marks span{
+    position: absolute;
+    font-size: 18px;
+    top:35%;
+    left:50%;
+    margin-left:-40px ;
+
+}
+#my_starbucks .rewards-marks-logo{
+    width: 210px;
+    height: 45px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left: -40px;
+    background: url("../img/rewards_logo_20170209.svg");
+}
+#my_starbucks .reward-content{
+    width:430px;
+    height: 220px;
+    color: #FFFFFF;
+    float: left;
+    margin-left: 60px;
+
+}
+#my_starbucks .reward-content .title,#my_starbucks .reward-content .text{
+    line-height: 28px;
+}
+#my_starbucks .reward-content .title{
+    font-size: 25px;
+    margin-top: 45px;
+}
+#my_starbucks .reward-content .text{
+    margin-bottom: 30px;
+}
+#my_starbucks .reward-content a{
+    border: 2px solid #a98e67;
+    padding: 14px 40px;
+    margin-right: 20px;
+    color: #a98e67;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+}
+#my_starbucks .reward-content .sp{
+    border: 0;
+
+}
+/*my_starbucks结束*/
+/*app开始*/
+#app{
+    background: url("../img/app_bg.gif");
+    position: relative;
+}
+#app .app-device{
+    width: 350px;
+    height: 200px;
+    display: inline-block;
+}
+#app .app-device img{
+    width: 200px;
+    height: 180px;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-left: 40px;
+}
+#app .app-download{
+    width: 150px;
+    margin: 0 auto;
+    display: inline-block;
+    height: 220px;
+ }
+#app .app-download img{
+    width: 150px;
+    height: 160px;
+}
+#app .app-download li{
+    list-style: none;
+    width: 17px;
+    height: 28px;
+    background: url("../img/download-img.png")no-repeat;
+    float: left;
+    margin: 0 5px;
+}
+#app .app-download ul .two{
+    background-position: -17px 0;
+}
+#app .app-download p{
+    float: right;
+    font-size: 12px;
+    margin: 0 4px;
+    border-left: 1px solid;
+}
+#app .app-content{
+
+
+    height: 220px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+
+}
+#app .app-content p{
+    font-size: 25px;
+    line-height: 28px;
+    vertical-align: middle;
+    margin-top: 80px;
+    margin-bottom: 14px;
+
+
+}
+#app .app-content a{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    color: #a98e67
+}
+/*app结束*/
+#banner{
+    width:100%;
+}
+#banner img{
+    width:100%;
+}
+@media(max-width:999px ){
+    #my_starbucks .rewards-marks{
+        width: 30%;
+    }
+    #my_starbucks .reward-content{
+        width: 50%;
+        margin-left: 5%;
+    }
+    #app .app-device{
+        width:30%;
+    }
+    #app .app-device img{
+        width: 60%;
+    }
+    #app .app-download{
+        width: 15%;
+    }
+}
+@media(max-width:768px ){
+
+}
