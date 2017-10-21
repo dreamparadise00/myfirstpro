@@ -27,6 +27,8 @@ var p3 = new Promise((resolve,reject)=>{
 //        })
 
 
+
+
 Promise.race([p1,p2,p3])
     .then(function(data){
         console.log(data);
