@@ -1,0 +1,28 @@
+@import "base";
+
+@mixin test ($f,$c){
+  font-size:$f ;
+  color: $c;
+}
+body{
+  @include test(24px,#000)
+}
+ul{
+  @include test(18px,#ccc);
+  @extend  body;
+  background: #F9AF2A;
+  color: #00b51d;
+}
+
+$i : 4;
+@while $i > 0{
+  .col-#{$i}{
+    width: 20px * $i;
+  }
+  $i : $i - 1;
+}
+@for $j from 1 through 4{
+  .col-#{$j}{
+    width: 10px * ($j *10) ;
+  }
+}

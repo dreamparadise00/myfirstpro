@@ -1,0 +1,24 @@
+$test:".test";
+$font:"font";
+#{$test + 1}{
+    color: #00A5FF;
+    #{$font+"-size"}:24px;
+}
+
+body{
+  color: #00A5FF;
+  font-size: 30px;
+  width:100px;
+
+
+}
+ul{
+  background: #00b51d;
+  li{
+    font-size: 40px;
+    p{
+      color: #2baca7;
+    }
+  }
+}
+
