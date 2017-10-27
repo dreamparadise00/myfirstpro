@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="msg">
+        {{msg}}
+        <span v-text="msg"></span>
+        <span v-html="msg"></span>
+        <button v-on:click="fn">click1</button>
+        <button @click="fn2">click2</button>
+        <button @click="fn3($event,1,2)">click3</button>
+
+
+
+    </div>
+</body>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            msg:'<h1>aaaaa</h1>'
+        },
+        methods:{
+            fn:function () {
+                console.log("达哥最帅！！！！")
+            },
+            fn2:function () {
+                alert("达哥最帅！！！！")
+            },fn3:function (e,a,b) {
+                console.log(e.target,a+b)
+            }
+        }
+    })
+    /*function V(obj) {
+        for(var p in obj){
+            if (p=='el'){
+                this['$'+ p] = document.querySelector(obj[p]);
+
+            }else if (p=='data'){
+                this['$'+p] = obj[p];
+                for(var q in obj[p]){
+                    this[q] = obj[p][q];
+                }
+            }
+        }
+    }
+   var v= new V({
+       el:'#app',
+       data:{
+           msg:'aaaa'
+       }
+       }
+
+   );*/
+</script>
+</html>
