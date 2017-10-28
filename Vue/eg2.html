@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <div id="app">
+            <!--<form >
+
+                <input type="text" v-model="ipt" >
+
+                <input type="submit" value="Submit" @click="fn1">
+            </form>-->
+            <input type="text" v-model="ipt" >
+
+            <input type="submit" value="Submit" @click="fn1">
+
+            <ul>
+
+                <li v-for=" obj in arr">
+                    {{search(obj)}}
+                </li>
+            </ul>
+        </div>
+</body>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            ipt:" ",
+            arr:[
+                {num:'111'},
+                {num:'11111'},
+                {num:'111aaa'},
+                {num:'111bbb'}
+                ]
+        },
+        methods:{
+            fn1:function () {
+                if(this.ipt){
+                    this.arr.unshift({num:this.ipt})
+
+                }
+
+                },
+           /* searchArr:function (index) {
+                if(this.ipt != " "){
+                    return indexof(this.ipt)
+                }
+
+            },*/
+           /* search:function (o) {
+                if (this.ipt == " ") {
+                   return  o.num;
+
+                }else{
+                    var i = 0;
+                    this.arr.forEach(function(val,index){
+                        if(indexOf(val.num)>-1){
+                            i =  index
+                        }
+                    })
+                    console.log(i)
+*/
+
+
+
+                }
+            }
+        }
+    })
+</script>
+</html>
+<!--
+function (a) {
+function (b， index, items) {
+return b.name.indexOf(a) > -1
+}
+}-->
