@@ -3,6 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #p111{
+            font-size: 50px;
+        }
+        .red{
+            background: red;
+        }
+        .font{
+            font-size: 40px;
+        }
+        .dis{
+            width: 300px;
+            height: 300px;
+            background: #000;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -13,6 +29,15 @@
         <button v-on:click="fn">click1</button>
         <button @click="fn2">click2</button>
         <button @click="fn3($event,1,2)">click3</button>
+        <p v-bind:id="p">达哥超级帅！！！！</p>
+        <p :class="{red:isRed,font:isFont}">ppppppppppp</p>
+        <p :class="{red:classObj}">ppppppppppp</p>
+        <p :class="[classA,classB]">ppppppppppp</p>
+        <button @click="a">click4</button>
+        <div :class="{dis:isDis}"></div>
+        <p :style="{background:bgColor,fontSize:fs}">达哥超级帅！！！！</p>
+        <p :style="styleObj">达哥超级帅！！！！</p>
+        <p :style="[styleA,styleB]">达哥超级帅！！！！</p>
 
 
 
@@ -23,16 +48,42 @@
     var vm = new Vue({
         el:'#app',
         data:{
-            msg:'<h1>aaaaa</h1>'
+            msg:'<h1>aaaaa</h1>',
+            p:'p111',
+            isRed:true,
+            isFont:true,
+            classObj:{
+                red:true,
+                font:false
+            },
+            classA:'red',
+            classB:'font',
+            isDis:true,
+            bgColor:'green',
+            fs:'40px',
+            styleObj:{
+                background:'red',
+                color:'green'
+            },
+            styleA:{
+                background:'red',
+                color:'green'
+            },
+            styleB:{
+                'font-size':'40px'
+            }
         },
         methods:{
             fn:function () {
                 console.log("达哥最帅！！！！")
             },
             fn2:function () {
-                alert("达哥最帅！！！！")
+                alert("白裤衩最帅！！！！")
             },fn3:function (e,a,b) {
                 console.log(e.target,a+b)
+            },a:function () {
+              this.isDis = ! this.isDis;
+
             }
         }
     })
