@@ -70,7 +70,36 @@
 <script src="../vue.js"></script>
 <script src="axios.min.js"></script>
 <script>
-
+    var vm = new Vue({
+        el:'#cart',
+        data:{
+            productList:[],
+            arr:[]
+        },
+        mounted:function(){
+            axios.get('cart.json').then((res)=>{
+                this.productList = res.data.result.productList;
+        });
+        },
+        computed:{
+            total:function(){
+                var totalPrice = 0;
+                this.arr.forEach(function(val){
+                    totalPrice +=val.productPrice * val.productQuentity;
+                });
+                return totalPrice;
+            }
+        },
+        methods:{
+            add(product){
+                product.productQuentity++;
+            },
+            del(index){
+                var a = this.productList.splice(index,1);
+                this.arr.splice(this.arr.indexOf(a[0]),1);
+            }
+        }
+    })
 
 
 
