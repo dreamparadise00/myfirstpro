@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+        function longest(str) {
+            var arr = str.split(" ");
+            var arrNum =[];
+            for(var i = 0;i<arr.length;i++){
+                arrNum.push(arr[i].length)
+            }
+            var flagMax = Math.max.apply({}, arrNum);
+            arrNum.index = function(value) {
+                var a = this;
+                for (var i = 0; i < a.length; i++) {
+                    if (a[i] == value)
+                        return i;
+                }
+
+
+            }
+            var index = arrNum.index(flagMax)
+            return arr[index]
+        };
+        function shortest(str) {
+            var arr = str.split(" ");
+            var arrNum =[];
+            for(var i = 0;i<arr.length;i++){
+                arrNum.push(arr[i].length)
+            }
+            var flagMax = Math.min.apply({}, arrNum);
+            arrNum.index = function(value) {
+                var a = this;
+                for (var i = 0; i < a.length; i++) {
+                    if (a[i] == value)
+                        return i;
+                }
+            }
+            var index = arrNum.index(flagMax)
+            return arr[index]
+        };
+        str = "adsf edseggrg dfsds asfdfdsf"
+        console.log(longest(str))
+    console.log(shortest(str))
+
+</script>
+</html>
